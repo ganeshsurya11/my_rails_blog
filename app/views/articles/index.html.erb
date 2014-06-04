@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+	<tr>
+	  <th>#</th>
+	  <th>Title</th>
+	  <th>Text</th>
+	  <th>Created</th>
+	  <th>Action</th>
+	</tr>
+  </thead>
+  <tbody>
+	<% @articles.each do |article| %>
+	<tr>
+	  <td>1</td>
+	  <td><%= article.title %></td>
+	  <td><%= article.text %></td>
+	  <td><%= article.created_at %></td>
+	  <td><%= link_to("Edit", edit_article_path(article.id)) %></td>
+	</tr>
+	<% end %>
+  </tbody>
+</table>
